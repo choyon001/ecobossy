@@ -28,7 +28,7 @@ const NavBar = () => {
 
   return (
     <div className="font-source-serif font-bold">
-      <div className="navbar bg-[#F8F6F0]">
+      <div className="navbar bg-[#F8F6F0]  ">
         <div className="dropdown lg:hidden">
           <div tabIndex={0} role="button" className="btn btn-ghost">
             <svg
@@ -78,9 +78,9 @@ const NavBar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
 
-        <div className="navbar-end flex gap-2">
+        <div className="navbar-end flex gap-2 ">
           {name ? (
-            <div className="dropdown dropdown-end">
+            <div className="dropdown dropdown-end ">
             <div
               tabIndex={0}
               role="button"

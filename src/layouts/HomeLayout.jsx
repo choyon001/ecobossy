@@ -6,11 +6,11 @@ import { Outlet } from "react-router-dom";
 const HomeLayout = () => {
   return (
     <div className="bg-[#F8F6F0] min-h-screen ">
-      <header className="w-11/12 mx-auto">
-        <NavBar></NavBar>
-      </header>
+      <header className="fixed top-0 left-1/2 transform -translate-x-1/2 z-50 w-11/12 bg-[#F8F6F0]">
+  <NavBar />
+</header>
 
-      <main className="w-11/12 mx-auto my-10">
+      <main className="w-11/12 mx-auto  pt-16">
         <Outlet></Outlet>
       </main>
 

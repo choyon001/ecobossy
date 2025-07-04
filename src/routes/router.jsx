@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import HomeLayout from './../layouts/HomeLayout';
-import Main from "../components/Main";
+import Main from "../components/pages/Main";
 import ErrorPage from "../components/ErrorPage";
 
 
@@ -11,7 +11,8 @@ const router = createBrowserRouter([
     children:[
         {
             path: "/",
-            element: <Main></Main>
+            element: <Main></Main>,
+            loader:()=>fetch("../../public/advenures.json")
         }
     ]
   },
