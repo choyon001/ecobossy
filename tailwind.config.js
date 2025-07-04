@@ -5,8 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'source-serif': ['"Source Serif 4"', 'serif'],
+        'josefin-sans': ['"Josefin Sans"', 'sans-serif'],
+        'Marko': ['"Marko One"', 'sans-serif'],
+      },
+    },
   },
-  plugins: [require('daisyui'),],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light", "dark"],
+  },
 }
-
