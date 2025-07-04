@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Authcontext } from "../provider/AuthProvider";
-
+import 'animate.css';
 const NavBar = () => {
   const { user } = useContext(Authcontext);
   const { name, email } = user;
@@ -71,7 +71,7 @@ const NavBar = () => {
           </ul>
         </div>
         <div className="navbar-start">
-          <a className="font-Marko text-xl">EcoBossy</a>
+          <a className="font-Marko text-xl animate__animated animate__heartBeat animate__infinite">EcoBossy</a>
         </div>
 
         <div className="navbar-center hidden lg:flex">
