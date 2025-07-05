@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import HomeLayout from './../layouts/HomeLayout';
 import Main from "../components/pages/Main";
 import ErrorPage from "../components/ErrorPage";
+import ExploreMore from './../components/ExploreMore';
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -12,7 +14,13 @@ const router = createBrowserRouter([
         {
             path: "/",
             element: <Main></Main>,
-            loader:()=>fetch("../../public/advenures.json")
+            loader:()=>fetch("/adventures.json")
+        },
+        {
+          path:"/explore/:id",
+          element:<PrivateRoute><ExploreMore></ExploreMore></PrivateRoute>,
+          loader: ()=>fetch(`/adventures.json`)
+          
         }
     ]
   },

@@ -16,7 +16,7 @@ const AdventureXps = () => {
     }, []);
 
     return (
-        <div className="mt-10">
+        <div className="mt-10 font-source-serif">
             <h1 className="font-bold text-2xl p-4">Adventure Experiences</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
                 {adventures.map((adventure, index) => {
