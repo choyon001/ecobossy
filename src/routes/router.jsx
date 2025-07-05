@@ -4,6 +4,9 @@ import Main from "../components/pages/Main";
 import ErrorPage from "../components/ErrorPage";
 import ExploreMore from './../components/ExploreMore';
 import PrivateRoute from "./PrivateRoute";
+import Auth from "../components/pages/Auth";
+import Login from "../components/Login";
+import Register from "../components/Register";
 
 
 const router = createBrowserRouter([
@@ -22,6 +25,20 @@ const router = createBrowserRouter([
           loader: ()=>fetch(`/adventures.json`)
           
         }
+    ]
+  },
+  {
+    path:"auth",
+    element:<Auth></Auth>,
+    children:[
+      {
+        path:"login",
+        element:<Login></Login>
+      },
+      {
+        path:"register",
+        element:<Register></Register>
+      }
     ]
   },
   {

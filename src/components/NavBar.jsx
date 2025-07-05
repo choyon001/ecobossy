@@ -55,12 +55,12 @@ const NavBar = () => {
               name ?"": (
                 <>
                 <li >
-              <Link to="/login" className=" ">
+              <Link to="auth/login" className=" ">
                 Login
               </Link>
             </li>
             <li >
-              <Link to="/register" className=" ">
+              <Link to="auth/register" className=" ">
                 Register
               </Link>
             </li>
@@ -111,12 +111,12 @@ const NavBar = () => {
           ) : (
              <ul className="menu menu-horizontal px-1 hidden lg:flex">
             <li >
-              <Link to="/login" className=" ">
+              <Link to="auth/login" className=" ">
                 Login
               </Link>
             </li>
             <li >
-              <Link to="/register" className=" ">
+              <Link to="auth/register" className=" ">
                 Register
               </Link>
             </li>
