@@ -1,17 +1,11 @@
 import { useContext } from 'react';
 import { FaLeaf, FaArrowRight } from 'react-icons/fa';
 import { Authcontext } from '../provider/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const AdventureCard = ({ adventure }) => {
     const {user} = useContext(Authcontext);
-    console.log("User in AdventureCard:", user);
-    console.log("Adventure in AdventureCard:", adventure);
-    const handleExploreMore = (event)=>{
-        console.log(event.target)
-        
-        
-    }
+    
   return (
     <div className=" bg-white rounded-lg overflow-hidden shadow-lg  flex flex-col h-full">
       {/* Image */}
@@ -51,7 +45,7 @@ const AdventureCard = ({ adventure }) => {
         
         
         <div className="mt-auto pt-4">
-          <Link to={`/explore/${adventure.id}`} className="w-full flex items-center justify-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors" onClick={()=>handleExploreMore(event)}>
+          <Link to={user?`/explore/${adventure.id}`:"/auth/login"} className="w-full flex items-center justify-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors" >
             Explore Now <FaArrowRight className="ml-2" />
           </Link>
         </div>

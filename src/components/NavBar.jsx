@@ -1,10 +1,16 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Authcontext } from "../provider/AuthProvider";
 import 'animate.css';
 const NavBar = () => {
-  const { user } = useContext(Authcontext);
-  const { name, email } = user;
+  const navigate = useNavigate();
+  const { user,logOut,setUser } = useContext(Authcontext);
+  // const { displayName, email } = user;
+  const handleLogOut = ()=>{
+    setUser({});
+    logOut();
+
+  }
   const links = (
     <>
       <li>
@@ -52,7 +58,7 @@ const NavBar = () => {
           >
             
             {
-              name ?"": (
+              user ?"": (
                 <>
                 <li >
               <Link to="auth/login" className=" ">
@@ -79,7 +85,7 @@ const NavBar = () => {
         </div>
 
         <div className="navbar-end flex gap-2 ">
-          {name ? (
+          {user ? (
             <div className="dropdown dropdown-end ">
             <div
               tabIndex={0}
@@ -104,7 +110,7 @@ const NavBar = () => {
                 <a>Update</a>
               </li>
               <li>
-                <a>Logout</a>
+                <Link to="/" onClick={handleLogOut}>Logout</Link>
               </li>
             </ul>
           </div>
