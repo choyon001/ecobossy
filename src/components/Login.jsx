@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 
 
 const Login = () => {
-  const { signInUser, signInWithGoogle } = useContext(Authcontext);
+  const { signInUser, signInWithGoogle,resetPassword } = useContext(Authcontext);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -83,7 +83,7 @@ const handleGoogleSignIn = () => {
 
         <div className="text-right">
           <Link
-            to="/auth/forgot-password"
+            to="/auth/forgotPassword"
             className="text-sm text-green-600 hover:underline"
           >
             Forgot password?

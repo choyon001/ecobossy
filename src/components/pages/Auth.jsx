@@ -5,7 +5,7 @@ const Auth = () => {
     return (
         <div>
             
-            <div className="flex justify-center items-center  bg-[#F8F6F0] min-h-screen">
+            <div className="flex justify-center items-center  bg-[#F8F6F0] min-h-screen font-source-serif">
                 <Outlet></Outlet>
             </div>
             
