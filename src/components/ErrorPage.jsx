@@ -3,6 +3,7 @@ import 'animate.css'
 const ErrorPage = () => {
     return (
         <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-4">
+          {<title>Error-404</title>}
       <div className="text-center animate__animated animate__fadeIn">
         <h1 className="text-9xl font-bold text-gray-800 mb-4">404</h1>
         <h2 className="text-3xl font-semibold text-gray-700 mb-6">

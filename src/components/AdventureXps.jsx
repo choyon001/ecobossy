@@ -5,7 +5,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const AdventureXps = () => {
-    const adventures = useLoaderData();
+    const  adventures  = useLoaderData();
+    
 
     useEffect(() => {
         AOS.init({

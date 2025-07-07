@@ -5,51 +5,52 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Authcontext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 
-
 const Login = () => {
-  const { signInUser, signInWithGoogle,resetPassword } = useContext(Authcontext);
+  const { signInUser, signInWithGoogle, resetPassword } =
+    useContext(Authcontext);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
   const handleSignInUser = (event) => {
-  event.preventDefault();
-  setLoading(true);
-  const form = event.target;
-  const email = form.email.value;
-  const password = form.password.value;
+    event.preventDefault();
+    setLoading(true);
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
 
-  signInUser(email, password)
-    .then(() => {
-      toast.success("Login successful!", {
-        autoClose: 2000,
-        onClose: () => navigate(from, { replace: true })
+    signInUser(email, password)
+      .then(() => {
+        toast.success("Login successful!", {
+          autoClose: 2000,
+          onClose: () => navigate(from, { replace: true }),
+        });
+      })
+      .catch((error) => {
+        toast.error(error.message || "Login failed. Please try again.");
+        setLoading(false);
       });
-    })
-    .catch((error) => {
-      toast.error(error.message || "Login failed. Please try again.");
-      setLoading(false);
-    });
-};
+  };
 
-const handleGoogleSignIn = () => {
-  setLoading(true);
-  signInWithGoogle()
-    .then(() => {
-      toast.success("Google login successful!", {
-        autoClose: 2000,
-        onClose: () => navigate(from, { replace: true })
+  const handleGoogleSignIn = () => {
+    setLoading(true);
+    signInWithGoogle()
+      .then(() => {
+        toast.success("Google login successful!", {
+          autoClose: 1000,
+          onClose: () => navigate(from, { replace: true }),
+        });
+      })
+      .catch((error) => {
+        toast.error(error.message || "Google login failed");
+        setLoading(false);
       });
-    })
-    .catch((error) => {
-      toast.error(error.message || "Google login failed");
-      setLoading(false);
-    });
-};
+  };
 
   return (
     <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
+      {<title>Login</title>}
       <h2 className="text-3xl font-bold text-center text-green-600 mb-6">
         User Login
       </h2>

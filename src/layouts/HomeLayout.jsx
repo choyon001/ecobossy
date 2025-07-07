@@ -6,6 +6,7 @@ import { Outlet } from "react-router-dom";
 const HomeLayout = () => {
   return (
     <div className="bg-[#F8F6F0] min-h-screen ">
+      {<title>Home</title>}
       <header className="fixed top-0 left-1/2 transform -translate-x-1/2 z-50 w-11/12 bg-[#F8F6F0]">
   <NavBar />
 </header>
@@ -14,7 +15,7 @@ const HomeLayout = () => {
         <Outlet></Outlet>
       </main>
 
-      <footer className="bg-[#E8DBCF]">
+      <footer className="bg-[#E8DBCF]  pt-16">
         <Footer></Footer>
       </footer>
     </div>
