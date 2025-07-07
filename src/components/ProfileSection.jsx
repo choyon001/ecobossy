@@ -12,7 +12,7 @@ const ProfileSection = () => {
         <div className="avatar">
           <div className="w-16 sm:w-20 rounded-full ring ring-green-400 ring-offset-base-100 ring-offset-2 overflow-hidden">
             <img 
-              src={user.photoURL || "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"} 
+              src={user.photoURL || "https://i.ibb.co/2tRrRfq/default-user.png"} 
               alt={user.displayName || "User"} 
               className="object-cover h-full"
             />

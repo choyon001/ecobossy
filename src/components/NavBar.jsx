@@ -20,8 +20,8 @@ const NavBar = () => {
       </li>
       
       <li>
-        <Link to="/about" className=" ">
-          Blog
+        <Link to="/review" className=" ">
+          Review
         </Link>
       </li>
       <li>
@@ -95,7 +95,8 @@ const NavBar = () => {
               <div className="w-10 rounded-full">
                 <img
                   alt="User profile"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  src={user.photoURL || "https://i.ibb.co/2tRrRfq/default-user.png"}
+                  className="object-cover"
                 />
               </div>
             </div>

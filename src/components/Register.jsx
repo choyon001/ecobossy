@@ -101,6 +101,10 @@ const Register = () => {
         updateUserInfo({ displayName: fullName, photoURL: photoURL })
           .then(() => {
             navigate("/");
+            localStorage.setItem("justRegistered", "true");
+            // Clear the form fields
+            event.target.reset();
+            
             toast.success("Registration successful!", {
               position: "top-center",
               autoClose: 3000,

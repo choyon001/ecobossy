@@ -2,6 +2,7 @@
 import AdventureXps from '../AdventureXps';
 import BannerSlider from '../BannerSlider';
 import EcoTips from '../EcoTips';
+import HomepageReviews from '../HomePageReviews';
 
 const Main = () => {
     return (
@@ -9,6 +10,7 @@ const Main = () => {
             <BannerSlider></BannerSlider>
             <AdventureXps></AdventureXps>
             <EcoTips></EcoTips>
+            <HomepageReviews></HomepageReviews>
         </div>
     );
 };
