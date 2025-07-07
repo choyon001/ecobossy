@@ -50,7 +50,6 @@ const AuthProvider = ({children}) => {
         return signOut(auth);
     }
 
-    // password reset 
     const resetPassword = (email)=>{
         setLoading(true);
         return sendPasswordResetEmail(auth,email);
@@ -65,8 +64,8 @@ const AuthProvider = ({children}) => {
         signInUser,
         logOut,
         loading,
-        resetPassword,
-        setLoading
+        setLoading,
+        resetPassword
     }
     return (
         <Authcontext.Provider value={authInfo}>{children}</Authcontext.Provider>

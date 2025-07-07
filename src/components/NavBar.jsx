@@ -104,7 +104,8 @@ const NavBar = () => {
               className="menu menu-sm dropdown-content bg-[#F8F6F0] rounded-box z-10 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a className="justify-between">Profile</a>
+                <Link to="/profile" className="justify-between">Profile</Link>
+                
               </li>
               <li>
                 <a>Update</a>

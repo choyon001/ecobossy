@@ -8,6 +8,7 @@ import Auth from "../components/pages/Auth";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import ForgotPassword from "../components/ForgotPassword";
+import ProfileSection from "../components/ProfileSection";
 
 
 const router = createBrowserRouter([
@@ -25,7 +26,11 @@ const router = createBrowserRouter([
           element:<PrivateRoute><ExploreMore></ExploreMore></PrivateRoute>,
           loader: ()=>fetch(`/adventures.json`)
           
-        }
+        },
+        {
+        path:"profile",
+        element:<PrivateRoute><ProfileSection></ProfileSection></PrivateRoute>
+      }
     ]
   },
   {
@@ -43,7 +48,8 @@ const router = createBrowserRouter([
       {
         path:"forgotPassword",
         element:<ForgotPassword></ForgotPassword>
-      }
+      },
+      
     ]
   },
   {
