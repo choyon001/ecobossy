@@ -6,10 +6,11 @@ import {
   FaSignal, 
   FaUsers, 
   FaCheckCircle, 
-  FaExclamationTriangle 
+  FaExclamationTriangle, 
+  FaArrowRight
 } from 'react-icons/fa';
 import 'animate.css';
-import { useLoaderData, useLocation } from 'react-router-dom';
+import { Link, useLoaderData, useLocation } from 'react-router-dom';
 
 const ExploreMore = () => {
   const data = useLoaderData();
@@ -17,7 +18,7 @@ const ExploreMore = () => {
   const adventure = data.find(adventure => adventure.id === parseInt(location.split('/explore/')[1]));
   console.log("Adventure in ExploreMore:", adventure);
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col h-full w-11/12 md:w-8/12 mx-auto my-10 mb-10">
+    <div className="bg-white rounded-lg overflow-hidden shadow-lg flex flex-col h-full w-11/12 md:w-8/12 mx-auto my-10 mb-10 font-source-serif">
   {/* Image */}
   <div className="h-48 overflow-hidden">
     <img 
@@ -122,7 +123,9 @@ const ExploreMore = () => {
     
     {/* CTA Button */}
     <div className="mt-auto pt-4">
-      
+      <Link to="/talkExpert" className="w-full flex items-center justify-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
+        Talk with Expert <FaArrowRight className="ml-2" />
+      </Link>
     </div>
   </div>
 </div>

@@ -11,6 +11,8 @@ import ForgotPassword from "../components/ForgotPassword";
 import ProfileSection from "../components/ProfileSection";
 import UpdateProfile from "../components/UpdateProfile";
 import ReviewForm from "../components/ReviewForm";
+import TalkWithExpert from "../components/TalkWithExpert";
+import About from "../components/About";
 
 const router = createBrowserRouter([
   {
@@ -51,6 +53,14 @@ const router = createBrowserRouter([
         path: "review",
         element: <PrivateRoute><ReviewForm></ReviewForm></PrivateRoute>,
       },
+      {
+        path: "talkExpert",
+        element: <PrivateRoute><TalkWithExpert></TalkWithExpert></PrivateRoute>,
+      },
+      {
+        path:"/about",
+        element:<About></About>
+      }
     ],
   },
   {
