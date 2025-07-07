@@ -9,6 +9,8 @@ import Login from "../components/Login";
 import Register from "../components/Register";
 import ForgotPassword from "../components/ForgotPassword";
 import ProfileSection from "../components/ProfileSection";
+import UpdateProfile from "../components/UpdateProfile";
+
 
 
 const router = createBrowserRouter([
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
         {
         path:"profile",
         element:<PrivateRoute><ProfileSection></ProfileSection></PrivateRoute>
+      },
+      {
+        path:"updateProfile",
+        element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
       }
     ]
   },

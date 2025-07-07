@@ -7,7 +7,7 @@ const ProfileSection = () => {
   if (!user) return null;
 
   return (
-    <div className="flex justify-center items-center py-8 px-4 min-h-screen">
+    <div className="flex justify-center items-center py-8 px-4 min-h-screen font-source-serif">
       <div className="flex flex-col sm:flex-row items-center gap-4 p-6 rounded-lg shadow-md w-full max-w-md sm:max-w-xl bg-white">
         <div className="avatar">
           <div className="w-16 sm:w-20 rounded-full ring ring-green-400 ring-offset-base-100 ring-offset-2 overflow-hidden">

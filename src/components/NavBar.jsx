@@ -108,8 +108,11 @@ const NavBar = () => {
                 
               </li>
               <li>
-                <a>Update</a>
+                <Link to="/updateProfile" className="justify-between">
+                  Update
+                </Link>
               </li>
+                
               <li>
                 <Link to="/" onClick={handleLogOut}>Logout</Link>
               </li>
